@@ -104,5 +104,5 @@ implement in the future. The following list is not necessarily exhaustive:
  A simple regex search may be able to identify them automatically.
  - __Additional Components__: Right now, the only component (additional variable beyond lat,long and address) is the postal code. In future I'd like to enable the option of generating Province and Province code too.
 
-```
+
 
