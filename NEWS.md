@@ -2,7 +2,7 @@
 
 ## Aug 28,2019
 
-The CRAN version of the `ggmap` package does not use a secure (https) request, which prevents the `map_it()` 
+- The CRAN version of the `ggmap` package does not use a secure (https) request, which prevents the `map_it()` 
 function from executing. To solve this, install the most recent version from GitHub by running: `devtools::install_github("dkahle/ggmap")` in your R console.
 
 - If you work for a company with a strict firewall, they may automatically block requests to google. To solve this problem, 
