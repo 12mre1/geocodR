@@ -28,8 +28,8 @@
 #' @export
 #'
 #' @examples \dontrun{
-#' geocodR(in_csv = 'yk_test.csv', api_key = KEY, address_col = 'Business Address', components = FALSE)
-#' geocodR(in_csv = 'organizations.csv', api_key = KEY, address_col = 'address', components = TRUE)
+#' geocodr(in_csv = 'yk_test.csv', api_key = KEY, address_col = 'Business Address', components = FALSE)
+#' geocodr(in_csv = 'organizations.csv', api_key = KEY, address_col = 'address', components = TRUE)
 #' }
 geocodr <- function(in_csv, api_key, address_col, out_file = "./output.csv",
                     bg_map = 'Canada', components = FALSE){
