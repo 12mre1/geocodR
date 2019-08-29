@@ -37,7 +37,8 @@ geocodR <- function(in_csv, api_key, address_col, out_file = "./output.csv",
   get_addresses(infile = in_csv,address_column = address_col) %>%
     check_for_blank() %>%
     remove_weird_characters() %>%
-    gcode(components) %>% ## gcode uses the complex assignment operator to instantiate out
+    gcode(components) %>% 
+    print_results() %>% # This is why print_results returns the original object
     write_to_file(name = out_file)
 }
 
