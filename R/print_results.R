@@ -24,4 +24,5 @@ print_results <- function(df){
   if(false_count == 0){
     message('All addresses successfully geocoded')
   }
+  return(df)
 }
