@@ -31,7 +31,7 @@
 #' geocodR(in_csv = 'yk_test.csv', api_key = KEY, address_col = 'Business Address', components = FALSE)
 #' geocodR(in_csv = 'organizations.csv', api_key = KEY, address_col = 'address', components = TRUE)
 #' }
-geocodR <- function(in_csv, api_key, address_col, out_file = "./output.csv",
+geocodr <- function(in_csv, api_key, address_col, out_file = "./output.csv",
                     bg_map = 'Canada', components = FALSE){
   register_key(api_key)
   get_addresses(infile = in_csv,address_column = address_col) %>%
