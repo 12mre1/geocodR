@@ -21,10 +21,11 @@ doing exactly that, but even so I find myself often writing similar code to mani
 5. [Future Work](#Future-Work)
 
 ## Installation Instructions
-The package is designed to work in R or RStudio (I am personally a big fan of the latter). If you do not have R, you can download it [here](https://www.r-project.org/), and RStudio can be downloaded [here](https://www.rstudio.com/products/rstudio/). Both are free.
+The package is designed to work in R or RStudio (I am personally a big fan of the latter). If you do not have R, you can download it [here](https://www.r-project.org/), and RStudio can be downloaded [here](https://www.rstudio.com/products/rstudio/). Both are free. You'll need the `devtools` package to install other packages from GitHub.
 
 Once you open R or RStudio, type the following into the console to install the package:
 ```
+install.packages('devtools')
 devtools::install_github('12mre1/geocodr', build_vignettes = TRUE)
 ```
 
