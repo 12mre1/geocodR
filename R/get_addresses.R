@@ -10,6 +10,10 @@
 #'
 #' @import magrittr
 #'
+#' @importFrom dplyr select
+#'
+#' @importFrom readr read_csv
+#'
 #' @examples \dontrun{
 #' get_addresses('F:/gitrepos/R-sandbox/pei-test.csv','Business Address')
 #'

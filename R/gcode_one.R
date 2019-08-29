@@ -6,6 +6,8 @@
 #'
 #' @param address A single character object. The address to be geocoded.
 #'
+#' @importFrom ggmap geocode
+#'
 #' @return Returns a three element vector: c(lat,long, full_address)
 #'
 #'

@@ -13,6 +13,8 @@
 #'
 #' @import magrittr
 #'
+#' @importFrom dplyr rename
+#'
 #' @export
 #'
 #' @examples \dontrun{

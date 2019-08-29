@@ -3,6 +3,8 @@
 #'
 #' @param api_key The api key, as a character object.
 #'
+#' @importFrom ggmap register_google
+#'
 #' @examples \dontrun{
 #' register_key('ASnERN405060i7NDNS') # This key is fictional
 #' }
@@ -11,5 +13,5 @@ register_key <- function(api_key){
   #read in the API key
   KEY <- api_key
   # Register key
-  ggmap::register_google(key = api_key)
+  ggmap::register_google(key = KEY)
 }

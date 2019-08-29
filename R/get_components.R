@@ -13,6 +13,10 @@
 #'
 #' @import magrittr
 #'
+#' @importFrom stringr str_extract
+#'
+#' @importFrom dplyr rename
+#'
 #' @export
 #'
 #' @examples \dontrun{
