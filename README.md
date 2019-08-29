@@ -21,7 +21,21 @@ doing exactly that, but even so I find myself often writing similar code to mani
 5. [Future Work](#Future-Work)
 
 ## Installation Instructions
+The package is designed to work in R or RStudio (I am personally a big fan of the latter). If you do not have R, you can download it [here](https://www.r-project.org/), and RStudio can be downloaded [here](https://www.rstudio.com/products/rstudio/). Both are free.
 
+- Once you open R or RStudio, type the following into the console to install the package:
+```
+devtools::install_github('12mre1/geocodr', build_vignettes = TRUE)
+```
+- Once the package is installed, just load it into namespace:
+```
+library(geocodr)
+```
+After that, I highly recommend you read the vignette, which is a walkthrough of a specific example.
+```
+browseVignettes('geocodr')
+vignette('basic_example')
+```
 ## Details
  
  Virtually every reputable mapping API requires the user to register and obtain an application key that must
