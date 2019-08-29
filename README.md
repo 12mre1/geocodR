@@ -33,9 +33,9 @@ If that doesn't work (for example if you have limited connection or a strong fir
 Error: Failed to install 'unknown package' from GitHub:
   Timeout was reached: Connection timed out after 10014 milliseconds
 ```
-In that case, try downloading the repo and installing locally:
-    - 1. Download the zip file and unzip it
-    - 2. In RStudio, run `devtools::install('C:\\Users\\matthew.edwards\\Downloads\\geocodr-master.zip\\geocodr-master',     build_vignettes = TRUE)`
+- In that case, try downloading the repo and installing locally:
+    1. Download the zip file and unzip it
+    2. In RStudio, run `devtools::install('C:\\Users\\matthew.edwards\\Downloads\\geocodr-master.zip\\geocodr-master',     build_vignettes = TRUE)`
     (Your file path would be different, but the double backslashes matter)
 
 Once the package is installed, you should see:
