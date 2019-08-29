@@ -23,22 +23,27 @@ doing exactly that, but even so I find myself often writing similar code to mani
 ## Installation Instructions
 The package is designed to work in R or RStudio (I am personally a big fan of the latter). If you do not have R, you can download it [here](https://www.r-project.org/), and RStudio can be downloaded [here](https://www.rstudio.com/products/rstudio/). Both are free.
 
-- Once you open R or RStudio, type the following into the console to install the package:
+Once you open R or RStudio, type the following into the console to install the package:
 ```
 devtools::install_github('12mre1/geocodr', build_vignettes = TRUE)
 ```
 
-- If that doesn't work (for example if you have limited connection or a strong firewall), you may get the following error:
+If that doesn't work (for example if you have limited connection or a strong firewall), you may get the following error:
 ```
 Error: Failed to install 'unknown package' from GitHub:
   Timeout was reached: Connection timed out after 10014 milliseconds
 ```
-- In that case, try downloading the repo and installing locally:
+In that case, try downloading the repo and installing locally:
     1. Download the zip file and unzip it
-    2. In RStudio, run `devtools::install('C:/Users/matthew.edwards/Downloads/geocodr-master.zip/geocodr-master')`
-    (Your file path would be different)
+    2. In RStudio, run `devtools::install('C:\\Users\\matthew.edwards\\Downloads\\geocodr-master.zip\\geocodr-master', build_vignettes = TRUE)`
+    (Your file path would be different, but the double backslashes matter)
 
-- Once the package is installed, just load it into namespace:
+Once the package is installed, you should see:
+```
+* DONE (geocodr)
+In R CMD INSTALL
+```
+Just load it into namespace:
 ```
 library(geocodr)
 ```
