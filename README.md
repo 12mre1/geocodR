@@ -27,11 +27,22 @@ The package is designed to work in R or RStudio (I am personally a big fan of th
 ```
 devtools::install_github('12mre1/geocodr', build_vignettes = TRUE)
 ```
+
+- If that doesn't work (for example if you have limited connection or a strong firewall), you may get the following error:
+```
+Error: Failed to install 'unknown package' from GitHub:
+  Timeout was reached: Connection timed out after 10014 milliseconds
+```
+- In that case, try downloading the repo and installing locally:
+    1. Download the zip file and unzip it
+    2. In RStudio, run `devtools::install('C:/Users/matthew.edwards/Downloads/geocodr-master.zip/geocodr-master')`
+    (Your file path would be different)
+
 - Once the package is installed, just load it into namespace:
 ```
 library(geocodr)
 ```
-After that, I highly recommend you read the vignette, which is a walkthrough of a specific example.
+After you have it installed, I highly recommend you read the vignette, which is a walkthrough of a specific example.
 ```
 browseVignettes('geocodr')
 vignette('basic_example')
