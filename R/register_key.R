@@ -3,7 +3,7 @@
 #'
 #' @param api_key The api key, as a character object.
 #'
-#' @import ggmap
+#' @importFrom ggmap register_google
 #'
 #' @examples \dontrun{
 #' register_key('ASnERN405060i7NDNS') # This key is fictional
