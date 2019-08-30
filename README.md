@@ -47,11 +47,6 @@ Then just load it into namespace.
 ```
 library(geocodr)
 ```
-
-You'll also need the `ggmap` package (the version on CRAN should be fine):
-```
-install.packages('ggmap')
-```
 After that, I highly recommend you read the vignette, which is a walkthrough of a specific example.
 ```
 browseVignettes('geocodr')

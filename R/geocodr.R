@@ -34,7 +34,7 @@
 #' }
 geocodr <- function(in_csv, api_key, address_col, out_file = "./output.csv",
                     bg_map = 'Canada', components = FALSE){
-  suppressWarnings(require(ggmap))
+  suppressWarnings(library(ggmap))
   ggmap::register_google(key = api_key, write=TRUE)
   get_addresses(infile = in_csv,address_column = address_col) %>%
     check_for_blank() %>%
