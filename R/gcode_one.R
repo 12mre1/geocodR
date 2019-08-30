@@ -15,12 +15,19 @@ gcode_one <- function(address) {
   # Since it's good practice to space requests, i'll force a pause
   Sys.sleep(0.025)
   #Geocode the address
-  response <- ggmap::geocode(address, output = "latlona")
-  # If the response is as expected, collect the data
-  lat <- as.numeric(response[1])
-  lng <- as.numeric(response[2])
-  full_address <- as.character(response[3])
-  # return information as a vector
-  return(c(lat,lng,full_address))
-
+  tryCatch({
+    response <- ggmap::geocode(address, output = "latlona")
+    # If the response is as expected, collect the data
+    lat <- as.numeric(response[1])
+    lng <- as.numeric(response[2])
+    full_address <- as.character(response[3])
+    # return information as a vector
+    return(c(lat,lng,full_address))
+    }, error = function(e){
+      print(e)
+      return(c(NA,NA,NA))
+    }, warning = function(w){
+      print(w)
+      return(c(NA,NA,NA))
+    })
 }
