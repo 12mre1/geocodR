@@ -13,5 +13,5 @@ register_key <- function(api_key){
   #read in the API key
   KEY <- api_key
   # Register key
-  ggmap::register_google(key = KEY)
+  register_google(key = KEY)
 }
