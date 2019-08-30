@@ -27,7 +27,23 @@ The package is designed to work in R or RStudio (I am personally a big fan of th
 ```
 devtools::install_github('12mre1/geocodr', build_vignettes = TRUE)
 ```
-- Once the package is installed, just load it into namespace:
+If, for some reason, you are unable to install from GitHub or clone the repo do to a connection error, you may get the following type of error:
+```
+Error: Failed to install 'geocodr' from GitHub:
+  Timeout was reached: Connection timed out after 10003 milliseconds
+```
+- You can always:
+    1. Download the zip file and extract its contents
+    2. Run `devtools::install('C:\\Users\\matthew.edwards\\Downloads\\geocodr-master(7)\\geocodr-master')`
+        (Your filepath will probably be different, but the double backslashes matter. The end of the path
+        should be the root directory of the package.)
+
+You'll know the package is installed if you see:
+```
+* DONE (geocodr)
+In R CMD INSTALL
+```
+Then just load it into namespace.
 ```
 library(geocodr)
 ```
