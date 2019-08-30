@@ -16,8 +16,8 @@ print_results <- function(df){
   false_count <- sum(is.na(df['latitude']))
   # If all addresses are geocoded, this is a non-issue
   if(false_count > 0){
-    message(paste('Although you input a csv with ',as.character(nrow(df[lat_column])), ' addresses,',
-                  'only ', as.character(nrow(df[lat_column]) - false_count), 
+    message(paste('Although you input a csv with ',as.character(nrow(df['latitude'])), ' addresses,',
+                  'only ', as.character(nrow(df['latitude']) - false_count), 
                   ' of them could be successfully geocoded.'))
     message('You will probably have to fill in missing values by hand :(')
   } 
