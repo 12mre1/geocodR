@@ -47,6 +47,10 @@ Then just load it into namespace.
 ```
 library(geocodr)
 ```
+You'll also need the `ggmap` package (if you haven't already installed it):
+```
+install.packages('ggmap')
+```
 After that, I highly recommend you read the vignette, which is a walkthrough of a specific example.
 ```
 browseVignettes('geocodr')
@@ -108,7 +112,6 @@ __Terms of Service__
 
 Although the current version of this package adds substantial value, there are other improvements i'd like to 
 implement in the future. The following list is not necessarily exhaustive:
-- __Remove Blanks__: For now, the main function does not execute properly if some entries in the address column are blank. This needs to be fixed ASAP.
  - __Reverse Geocoding__: This first version allows for addresses to be converted to long/lat, but not the 
  reverse process. That should be changed going forward.
  - __Partial Addresses__: Google Maps API is already capable of finding partial addresses, but cases here assume
