@@ -25,9 +25,10 @@ gcode_one <- function(address) {
     return(c(lat,lng,full_address))
     }, error = function(e){
       print(e)
+      message('The address was too vague for Google to return a single reference point')
       return(c(NA,NA,NA))
     }, warning = function(w){
       print(w)
       return(c(NA,NA,NA))
-    })
+  })
 }
