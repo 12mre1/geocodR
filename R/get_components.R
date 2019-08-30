@@ -11,7 +11,7 @@
 #' @return A dataframe with full address and components (postal code, prov,..) and potentially other
 #' data.
 #'
-#' @import magrittr
+#' @importFrom magrittr "%>%"
 #'
 #' @importFrom stringr str_extract
 #'

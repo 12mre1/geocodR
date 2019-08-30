@@ -8,7 +8,7 @@
 #'
 #' @return Returns the address column as a dataframe object.
 #'
-#' @import magrittr
+#' @importFrom magrittr "%>%"
 #'
 #' @importFrom dplyr select
 #'

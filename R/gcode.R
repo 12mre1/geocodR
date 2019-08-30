@@ -11,7 +11,7 @@
 #' @return A dataframe object with initial address, lat, long and full address. Postal code may
 #' also be included.
 #'
-#' @import magrittr
+#' @importFrom magrittr "%>%"
 #'
 #' @importFrom dplyr rename
 #'

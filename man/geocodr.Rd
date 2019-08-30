@@ -5,15 +5,12 @@
 \title{\code{geocodr} This function batch geocodes csv files with the help of the ggmap package,
 which uses the Google Maps API}
 \usage{
-geocodr(in_csv, api_key, address_col, out_file = "./output.csv",
+geocodr(in_csv, key, address_col, out_file = "./output.csv",
   bg_map = "Canada", components = FALSE)
 }
 \arguments{
 \item{in_csv}{A character object. The name of the input CSV file with a column of addresses.
 If the full path is not given, the function assumes the file is in cwd}
-
-\item{api_key}{A character object. The API key provided by Google Maps API. Geocoding will not
-work without it.}
 
 \item{address_col}{A character object containing the name of the address column in the input file.}
 
@@ -25,6 +22,9 @@ plot the geocoded points. Defaults to 'Canada'.}
 
 \item{components}{Logical. If TRUE, the postal code will be included as a separate variable in
 the output file. Defaults to \code{FALSE}.}
+
+\item{api_key}{A character object. The API key provided by Google Maps API. Geocoding will not
+work without it.}
 }
 \description{
 \code{geocodr} This function batch geocodes csv files with the help of the ggmap package,

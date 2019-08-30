@@ -14,7 +14,7 @@
 gcode_one <- function(address) {
   # Since it's good practice to space requests, i'll force a pause
   Sys.sleep(0.025)
-  #Geocode the address
+  #Try to geocode the address
   tryCatch({
     response <- ggmap::geocode(address, output = "latlona")
     # If the response is as expected, collect the data
@@ -25,10 +25,10 @@ gcode_one <- function(address) {
     return(c(lat,lng,full_address))
     }, error = function(e){
       print(e)
-      message('The address was too vague for Google to return a single reference point')
       return(c(NA,NA,NA))
     }, warning = function(w){
       print(w)
+      message('The address was too vague for Google to return a single reference point')
       return(c(NA,NA,NA))
   })
 }

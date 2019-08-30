@@ -23,7 +23,7 @@
 #' @param components Logical. If TRUE, the postal code will be included as a separate variable in
 #' the output file. Defaults to \code{FALSE}.
 #'
-#' @import magrittr
+#' @importFrom magrittr "%>%"
 #'
 #' @export
 #'
@@ -31,9 +31,9 @@
 #' geocodr(in_csv = 'yk_test.csv', api_key = KEY, address_col = 'Business Address', components = FALSE)
 #' geocodr(in_csv = 'organizations.csv', api_key = KEY, address_col = 'address', components = TRUE)
 #' }
-geocodr <- function(in_csv, api_key, address_col, out_file = "./output.csv",
+geocodr <- function(in_csv, key, address_col, out_file = "./output.csv",
                     bg_map = 'Canada', components = FALSE){
-  register_key(api_key)
+  register_key(api_key = key)
   get_addresses(infile = in_csv,address_column = address_col) %>%
     check_for_blank() %>%
     remove_weird_characters() %>%
