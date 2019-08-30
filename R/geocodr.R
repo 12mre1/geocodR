@@ -24,6 +24,7 @@
 #' the output file. Defaults to \code{FALSE}.
 #'
 #' @importFrom magrittr "%>%"
+#' @importFrom ggmap register_google
 #'
 #' @export
 #'
@@ -31,9 +32,9 @@
 #' geocodr(in_csv = 'yk_test.csv', api_key = KEY, address_col = 'Business Address', components = FALSE)
 #' geocodr(in_csv = 'organizations.csv', api_key = KEY, address_col = 'address', components = TRUE)
 #' }
-geocodr <- function(in_csv, key, address_col, out_file = "./output.csv",
+geocodr <- function(in_csv, api_key, address_col, out_file = "./output.csv",
                     bg_map = 'Canada', components = FALSE){
-  register_key(api_key = key)
+  ggmap::register_google(key = api_key, write=TRUE)
   get_addresses(infile = in_csv,address_column = address_col) %>%
     check_for_blank() %>%
     remove_weird_characters() %>%
