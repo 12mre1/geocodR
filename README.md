@@ -2,6 +2,7 @@
 
 # geocodr
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/12mre1/geocodr.svg?branch=master)](https://travis-ci.org/12mre1/geocodr)
 <!-- badges: end -->
 ## Basic overview
 In almost every mapping project, one of the most important steps is converting address data into coordinates 
