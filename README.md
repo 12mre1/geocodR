@@ -28,7 +28,7 @@ The package is designed to work in R or RStudio (I am personally a big fan of th
 ```
 devtools::install_github('12mre1/geocodr', build_vignettes = TRUE)
 ```
-If, for some reason, you are unable to install from GitHub or clone the repo do to a connection error, you may get the following type of error:
+If, for some reason, you are unable to install from GitHub or clone the repo due to a connection failure, you may get the following type of error:
 ```
 Error: Failed to install 'geocodr' from GitHub:
   Timeout was reached: Connection timed out after 10003 milliseconds
