@@ -25,7 +25,7 @@
 gcode <- function(df, components = FALSE){
   # Transpose the resulting dataframe before assigning it
   out <<- t(apply(df,gcode_one, MARGIN = 1))
-  df %>% cbind(out) %>%
+  data %>% cbind(out) %>%
     rename("latitude" = "1","longitude" = "2", "full_address" = "3") %>%
     {if(components) get_components(.) else .} %>%
     return()
