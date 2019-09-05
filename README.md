@@ -52,11 +52,7 @@ You'll also need the `ggmap` package (if you haven't already installed it):
 ```
 install.packages('ggmap')
 ```
-After that, I highly recommend you read the vignette, which is a walkthrough of a specific example.
-```
-browseVignettes('geocodr')
-vignette('basic_example')
-```
+
 ## Details
  
  Virtually every reputable mapping API requires the user to register and obtain an application key that must
@@ -71,11 +67,10 @@ vignette('basic_example')
 
 ## Limitations
 - For now, the only choice of input or output is a csv file. I may change this in future.
-- Partial or ambiguous addresses that would normally return a menu of choices in your browser will 
-return `NA` when the response provides multiple options. It is better to have exact addresses to reduce the likelihood of this 
-happening.
 - The package only allow for forward geocoding. Reverse geocoding (latlong to address) is not yet possible.
 - The only choice of output is a csv file (will change this in future)
+- If just the street address is provided (no city, postal code or country), the API may mistakenly return
+reference coordinates for an identical US address.
 
 ## A Note About Google API Features
 As of 2018, GoogleMaps requires all users to pass a key in each request. You can register for an API key 
@@ -116,7 +111,7 @@ implement in the future. The following list is not necessarily exhaustive:
  - __Reverse Geocoding__: This first version allows for addresses to be converted to long/lat, but not the 
  reverse process. That should be changed going forward.
  - __Partial Addresses__: Google Maps API is already capable of finding partial addresses, but cases here assume
- that the first search result is the correct one. With a partial address, the API might return multiple options, 
+ that the first search result is the correct one. With a partial address, the API might return the wrong option, 
  and this tool only ever assumes that the first choice is the correct one.
  - __Alternate Outputs__: It would be nice if the results could be output into other (non-csv) formats, like
  JSON or GeoJSON. Many open source mapping softwares take as inputs these types of files.
@@ -126,6 +121,7 @@ implement in the future. The following list is not necessarily exhaustive:
  - __Auto-identify Addresses__: It would be nice if you didn't have to specify which column contains the addresses.
  A simple regex search may be able to identify them automatically.
  - __Additional Components__: Right now, the only component (additional variable beyond lat,long and address) is the postal code. In future I'd like to enable the option of generating Province and Province code too.
+ - __More Testing__: Code coverage is pretty weak right now. More testing will fix that.
 
 
 
