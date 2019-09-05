@@ -1,5 +1,5 @@
-source('R/check_for_blank.R')
-library(testthat)
+# source('R/check_for_blank.R')
+# library(testthat)
 
 
 
