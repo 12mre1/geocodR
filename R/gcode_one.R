@@ -16,7 +16,8 @@ gcode_one <- function(address) {
   Sys.sleep(0.025)
   #Try to geocode the address
   tryCatch({
-    response <- ggmap::geocode(address, output = "latlona")
+    # response <- ggmap::geocode(address, output = "latlona")
+    response <- geocode(address, output = "latlona")
     # If the response is as expected, collect the data
     lat <- as.numeric(response[1])
     lng <- as.numeric(response[2])

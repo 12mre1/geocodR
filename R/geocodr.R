@@ -34,12 +34,13 @@
 #' }
 geocodr <- function(in_csv, api_key, address_col, out_file = "./output.csv",
                     bg_map = 'Canada', components = FALSE){
-  suppressWarnings(requireNamespace(ggmap))
-  ggmap::register_google(key = api_key, write=TRUE)
+  suppressWarnings(requireNamespace('ggmap'))
+  # ggmap::register_google(key = api_key, write=TRUE)
+  register_google(key = api_key, write=TRUE)
   get_addresses(infile = in_csv,address_column = address_col) %>%
     check_for_blank() %>%
     remove_weird_characters() %>%
-    gcode(components) %>%
+    gcode(infile = in_csv,components) %>%
     print_results() %>% # This is why print_results returns the original object
     write_to_file(name = out_file)
 }

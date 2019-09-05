@@ -21,8 +21,9 @@
 #' }
 
 get_addresses <- function(infile,address_column = "address"){
-  in_df <<- readr::read_csv(infile, col_names = TRUE)
-  in_df %>%
+  # in_df <- readr::read_csv(infile, col_names = TRUE)
+  # in_df %>%
+  readr::read_csv(infile, col_names = TRUE) %>%
     dplyr::select(address_column) %>%
     as.data.frame()
 }

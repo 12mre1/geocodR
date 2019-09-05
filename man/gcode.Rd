@@ -4,10 +4,13 @@
 \alias{gcode}
 \title{\code{gcode} Geocodes a dataframe of addresses using Google Maps API via ggmap}
 \usage{
-gcode(df, components = FALSE)
+gcode(df, infile, components = FALSE)
 }
 \arguments{
 \item{df}{A single-column dataframe of addresses.}
+
+\item{infile}{The file name or path of the input csv. Used as the base to which reference
+coordinates are appended}
 
 \item{components}{Logical. Postal code is included if \code{components = TRUE}. Defaults to FALSE.}
 }
